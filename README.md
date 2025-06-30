@@ -2,6 +2,22 @@
 
 A simple Python script to automatically translate `Localizable.xcstrings` files for Xcode projects using Google Translate. This tool helps you quickly add new localizations to your iOS or macOS applications by filling in missing translations.
 
+## Xcode Setup
+
+Before using the translator script, you need to set up a `Localizable.xcstrings` file in your Xcode project.
+
+1.  **Create a String Catalog:**
+    *   In Xcode, right-click on your project folder in the Project Navigator.
+    *   Select **New File From Template**.
+    *   In the filter bar, type `String` and select the **String Catalog** template.
+    *   Name the file `Localizable.xcstrings` and create it.
+
+2.  **Populate Initial Strings:**
+    *   Build and run your project once. Xcode will scan your code for localizable strings (e.g., `String("Hello, World!")` in SwiftUI or `NSLocalizedString`) and add them to your `Localizable.xcstrings` file.
+
+3.  **Translate:**
+    *   Once your strings appear in the String Catalog, you can run the Python script to translate them into your desired language.
+
 ## Features
 
 -   Translates string values that are missing for a target language.
